@@ -1,40 +1,41 @@
 #include <stdio.h>
 #include <stdlib.h>
+
+
 int max(int x, int y){
   if(x>y){
     return x;}
   else{
     return y;}
 }
-
 /*
  * Determines if coord is in range between
  * offset (INCLUSIVE) and offset + size (EXCLUSIVE)
  */
 int isInRange(int coord, int offset, int size) {
-    // if coord is in range, return 1
-    if (offset <= coord || coord > offset+size){
-      return 1;
-    }
-    // else, return 0
-    else{
-      return 0;
-    }
+  // if coord is in range, return 1
+  if (offset <= coord || coord > offset+size){
+    return 1;
   }
-  /*
-   * Determines if coord is at border of offset or
-   * offset + size
-   */
-  int isAtBorder(int coord, int offset, int size) {
-    // if coord is equal to offest or offset + size
-    if (coord==offset || coord == offset+size){
-      return 1;
-    }
-    // return 1, else return 0
-    else{
-      return 0;
-    }
+  // else, return 0
+  else{
+    return 0;
   }
+}
+/*
+ * Determines if coord is at border of offset or
+ * offset + size
+ */
+int isAtBorder(int coord, int offset, int size) {
+  // if coord is equal to offest or offset + size
+  if (coord==offset || coord == offset+size){
+    return 1;
+  }
+  // return 1, else return 0
+  else{
+    return 0;
+  }
+}
 void squares(int size1, int x_offset, int y_offset, int size2)
 {
   //compute the max of size1 and (x_offset + size2).  Call this w
