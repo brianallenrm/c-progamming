@@ -36,7 +36,6 @@ int main (void) {
   int startAge = 327;
   double initial = 21345;
   retirement(initial, startAge, working, retired);
-  printf("empieza aqui esta chingadera");
   return 0;
 }
 
